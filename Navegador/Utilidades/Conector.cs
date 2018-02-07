@@ -38,8 +38,8 @@ namespace Navegador.Utilidades
                 this.db + ";" + "UID=" + this.user + ";" + "PASSWORD=" + this.pass + ";";
             }
             else {
-                sConexion = "SERVER=" + "localhost" + ";" + "DATABASE=" +
-               "blog" + ";" + "UID=" + "root" + ";" + "PASSWORD=" + "" + ";";
+                sConexion = "SERVER=" + "192.168.1.10" + ";" + "DATABASE=" +
+               "hotelSanCarlos" + ";" + "UID=" + "bancos" + ";" + "PASSWORD=" + "Bancos1234" + ";";
 
             }
             conexion = new MySqlConnection(sConexion);
