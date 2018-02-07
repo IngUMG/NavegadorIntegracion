@@ -166,7 +166,7 @@ namespace Navegador
             iColumnasTotal = data.Tables[0].Columns.Count;
             for (int i = 0; i < iColumnasTotal; i++)
             {
-                resultado += data.Tables[0].Rows[iPosicion][i].ToString() + " , ";
+                resultado += data.Tables[0].Rows[iPosicion][i].ToString();
             }
             MessageBox.Show("Dato : " + resultado);
             this.sResult = resultado;
@@ -200,11 +200,6 @@ namespace Navegador
             btn_ultimo.Enabled = true;
             btn_imprimir.Enabled = true;
             btn_modificar.Enabled = true;
-        }
-
-        private void btn_imprimir_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void btn_primero_Click(object sender, EventArgs e)
