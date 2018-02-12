@@ -46,7 +46,6 @@ namespace Navegador.Utilidades
             try
             {
                 conexion.Open();
-                MessageBox.Show("Test Correct");
                 return true;
             }
             catch (MySqlException ex)

@@ -75,16 +75,44 @@ namespace Navegador.Utilidades
             this.valores = valores;
         }
 
+        /**
+         * Establece los valores que seran usado en consultas mas complejas como subconsultas
+         * o inner joins
+        * @param textocomparativo texto dinamico 
+        * 
+        * EJEMPLO:
+        *    GeneradorSQL.setComparacion("WHERE id = 1 AND FECHA LIKE '%2018'")
+        */
+
 
         public void setComparacion(String textoComparativo)
         {
             this.textoComparativo = textoComparativo;
         }
 
+
+        /**
+         * Establece los valores que seran usado en consultas con una comparacion simple
+        * @param campo nombre del campo que desea usar como validacion
+        * @param valor  valor que debe contener ese campo
+        * 
+        * EJEMPLO:
+        *    GeneradorSQL.setComparacion("nombre",Luis);
+        */
+
         public void setComparacion(String campo, String valor)
         {
             this.textoComparativo = "WHERE " + campo + "='" + valor + "'";
         }
+
+        /**
+        * Ulima metodo a implementar aca se construye toda la sintaxis de un
+        * consulta en lenguaje MySQL y se hace la peticion al servidor para afectar
+        * la base de datos
+        * 
+        * EJEMPLO:
+        *    GeneradorSQL.ejecutar
+        */
 
 
         public void ejecutar()

@@ -166,7 +166,7 @@ namespace Navegador
             iColumnasTotal = data.Tables[0].Columns.Count;
             for (int i = 0; i < iColumnasTotal; i++)
             {
-                resultado += data.Tables[0].Rows[iPosicion][i].ToString();
+                resultado += data.Tables[0].Rows[iPosicion][i].ToString() + ",";
             }
             MessageBox.Show("Dato : " + resultado);
             this.sResult = resultado;
@@ -174,7 +174,14 @@ namespace Navegador
 
         private void button11_Click(object sender, EventArgs e)
         {
-            iPosicion++;
+            if (iPosicion == (iFilastotal - 1))
+            {
+                iPosicion = (iFilastotal - 1);
+            }
+            else
+            {
+                iPosicion++;
+            }
             getDatoManipulable(iPosicion);
             if (this.RecibidorSiguiente != null)
                 this.RecibidorSiguiente(this, e);
@@ -204,7 +211,7 @@ namespace Navegador
 
         private void btn_primero_Click(object sender, EventArgs e)
         {
-            iPosicion = iFilastotal - 1;
+            iPosicion = 0;
             getDatoManipulable(iPosicion);
             if (this.RecibidorPrimero != null)
                 this.RecibidorPrimero(this, e);
