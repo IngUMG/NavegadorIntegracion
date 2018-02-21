@@ -69,6 +69,12 @@ namespace Navegador
             btn_modificar.Enabled = false;
         }
 
+        private void  solicitar_permisos(){
+            Conector c = new Conector(sServidor,sNombreBD,sUsuario,sPass);
+            c.OpenConnection();
+
+        }
+
         private void label1_Click(object sender, EventArgs e)
         {
 

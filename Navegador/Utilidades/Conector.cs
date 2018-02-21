@@ -85,6 +85,12 @@ namespace Navegador.Utilidades
             }
         }
 
+        public void consularConRetorno(){
+
+
+        
+        }
+
 
         //Close connection
         private bool CloseConnection()
